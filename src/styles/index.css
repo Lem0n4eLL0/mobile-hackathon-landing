@@ -1,3 +1,3 @@
-@import '~@csstools/normalize.css';
+@import '../../node_modules/@csstools/normalize.css';
 @import url('./variables.css');
 @import url('./globals.css');
