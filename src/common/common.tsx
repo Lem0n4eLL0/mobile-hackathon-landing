@@ -1,5 +1,7 @@
 /* Header */
 
+export const BURGER_MENU_APPEARANCE_WIDTH = 1023
+
 export type HeaderMenuLink = {
   lable: string
   href: string

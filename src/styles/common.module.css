@@ -1,0 +1,18 @@
+.pink_btn {
+  color: var(--color-white);
+  padding: 16px 32px;
+  background-color: var(--accent-bg-color);
+  border-radius: 24px;
+  font-family: 'YS Text';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  transition: opacity var(--base-transition-property);
+  cursor: pointer;
+  border: none;
+}
+
+.pink_btn:hover,
+.pink_btn:focus-visible {
+  opacity: 0.85;
+}
