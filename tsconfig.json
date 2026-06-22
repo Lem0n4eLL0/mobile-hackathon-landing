@@ -26,7 +26,8 @@
       "@/components/*": ["components/*"],
       "@/pages/*": ["pages/*"],
       "@/utils/*": ["utils/*"],
-      "@/common/*": ["common/*"]
+      "@/common/*": ["common/*"],
+      "@/assets/*": ["assets/*"]
     }
   },
   "include": [

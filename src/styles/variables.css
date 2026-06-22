@@ -1,7 +1,9 @@
 :root {
   /* fonts */
+  /*
   --main-font: 'YS Display', sans-serif;
   --additional-font: 'YS Text', sans-serif;
+  */
 
   /* palette */
   --color-pink-700: #ff017e;
@@ -30,4 +32,25 @@
   --additional-bg-color: var(--color-white);
   --additional-bg-color-2: var(--color-grey-100);
   --accent-bg-color: var(--color-pink-700);
+
+  /* other */
+  --base-side-paddings-page: 148px;
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --base-side-paddings-page: 108px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --base-side-paddings-page: 68px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --base-side-paddings-page: 28px;
+  }
 }

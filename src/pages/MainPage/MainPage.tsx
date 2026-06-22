@@ -1,9 +1,13 @@
+import { MainHeader } from '@/layouts/headers/MainHeader'
+import styles from './MainPage.module.css'
+import { BASE_HEADER_MENU_LINKS } from '@/common/common'
+
 export const MainPage = () => {
   return (
-    <>
-      <header></header>
-      <main>Main Page</main>
+    <div className={styles.content__wrapper}>
+      <MainHeader menuLinks={BASE_HEADER_MENU_LINKS} />
+      <main className={styles.content}>Main Page</main>
       <footer></footer>
-    </>
+    </div>
   )
 }
