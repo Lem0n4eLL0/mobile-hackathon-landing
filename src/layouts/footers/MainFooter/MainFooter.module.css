@@ -1,0 +1,111 @@
+.footer__wrapper {
+  background-color: var(--main-bg-color-2);
+  color: var(--additional-text-color);
+}
+
+.footer {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: minmax(124px, auto) auto;
+  max-width: 1440px;
+  gap: 48px 0;
+  padding: 56px 32px 36px;
+}
+
+.footer__links-block {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer__link {
+  font-size: 20px;
+  line-height: 1.2;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-underline-position: below;
+  color: var(--additional-text-color);
+  transition: color var(--base-transition-property);
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  color: var(--additional-text-color-effect);
+}
+
+.footer__social-media-block {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.footer__copyright-block {
+  grid-area: 2 / 1 / 3 / span 2;
+}
+
+.footer__social-media-block-title {
+  font-family: 'YS Display';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  text-wrap: nowrap;
+}
+
+.footer__social-media-block-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__social-media-block-list-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer__social-media-block-link {
+  transition: opacity var(--base-transition-property);
+}
+
+.footer__social-media-block-link:hover,
+.footer__social-media-block-link:focus-visible {
+  opacity: 0.85;
+}
+
+.footer__copyright-block {
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--additional-text-color-3);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 12px 28px;
+  }
+
+  .footer__link {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .footer__social-media-block-title {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .footer__social-media-block-list {
+    justify-content: flex-start;
+  }
+
+  .footer__copyright-block {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+}
