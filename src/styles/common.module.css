@@ -3,9 +3,10 @@
   padding: 16px 32px;
   background-color: var(--accent-bg-color);
   border-radius: 24px;
-  font-family: 'YS Text';
+  font-family: var(--main-text-font);
   font-weight: 500;
   font-size: 20px;
+  text-wrap: nowrap;
   line-height: 1.2;
   transition: opacity var(--base-transition-property);
   cursor: pointer;

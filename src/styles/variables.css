@@ -39,6 +39,7 @@
   --base-transition-property: ease 0.3s;
   /* other */
   --base-side-paddings-page: 148px;
+  --base-block-max-width: 1440px;
 }
 
 @media (max-width: 1279px) {

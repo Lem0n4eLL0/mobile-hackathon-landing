@@ -44,7 +44,7 @@
 }
 
 .footer__social-media-block-title {
-  font-family: 'YS Display';
+  font-family: var(--main-title-font);
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
