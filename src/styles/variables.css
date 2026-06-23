@@ -39,6 +39,8 @@
   --base-transition-property: ease 0.3s;
   /* other */
   --base-side-paddings-page: 148px;
+  --base-top-paddings-page: 48px;
+  --base-bottom-paddings-page: 96px;
   --base-block-max-width: 1440px;
 }
 
@@ -57,5 +59,6 @@
 @media (max-width: 767px) {
   :root {
     --base-side-paddings-page: 28px;
+    --base-bottom-paddings-page: 48px;
   }
 }
