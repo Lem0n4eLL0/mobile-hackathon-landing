@@ -1,11 +1,20 @@
 :root {
-  /* fonts */
+  /* FONTS */
+
+  /* family */
   /*
-  --main-font: 'YS Display', sans-serif;
-  --additional-font: 'YS Text', sans-serif;
+  --main-title-font: 'YS Display', sans-serif;
+  --main-text-font: 'YS Text', sans-serif;
   */
 
-  /* palette */
+  /* h2 */
+  --main-title-h2-font-size: 64px;
+  --main-title-h2-line-height: 0.91;
+  --main-title-h2-font: 500 var(--main-title-h2-font-size) / var(--main-title-h2-line-height)
+    var(--main-title-font);
+  --main-title-h2-letter-spacing: -0.01em;
+
+  /* PALETTE */
   --color-pink-700: #ff017e;
 
   --color-grey-100: #f2f2f2;
@@ -35,9 +44,10 @@
   --additional-bg-color-2: var(--color-grey-100);
   --accent-bg-color: var(--color-pink-700);
 
-  /* effects */
+  /* EFFECTS */
   --base-transition-property: ease 0.3s;
-  /* other */
+
+  /* OTHER */
   --base-side-paddings-page: 148px;
   --base-top-paddings-page: 48px;
   --base-bottom-paddings-page: 96px;
@@ -58,6 +68,12 @@
 
 @media (max-width: 767px) {
   :root {
+    /* FONTS */
+    /* h2 */
+    --main-title-h2-font-size: 36px;
+    --main-title-h2-line-height: 0.89;
+
+    /* OTHER */
     --base-side-paddings-page: 28px;
     --base-bottom-paddings-page: 48px;
   }
