@@ -1,0 +1,54 @@
+.activities__wrapper {
+  color: var(--additional-text-color);
+  background-color: var(--main-bg-color);
+  background-image:
+    url('@/assets/road-map-bg-decorative-element-1.png'),
+    url('@/assets/road-map-bg-decorative-element-2.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position:
+    50%,
+    -50%;
+}
+
+.activities {
+  padding: var(--base-top-paddings-page) var(--base-side-paddings-page)
+    var(--base-bottom-paddings-page);
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  max-width: var(--base-block-max-width);
+}
+
+.activities__title {
+  font: var(--main-title-h2-font);
+  letter-spacing: var(--main-title-h2-letter-spacing);
+  margin: 0 0 24px;
+}
+
+.activities__subtitle {
+  font-size: 28px;
+  line-height: 1.14;
+  margin: 0 0 48px;
+}
+
+.activities__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 48px;
+}
+
+@media (max-width: 767px) {
+  .activities__subtitle {
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0 0 24px;
+  }
+
+  .activities__list {
+    margin: 0 0 24px;
+  }
+}
