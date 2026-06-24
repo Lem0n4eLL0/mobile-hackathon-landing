@@ -1,0 +1,1 @@
+export { MainActivitiesCard } from './MainActivitiesCard'
