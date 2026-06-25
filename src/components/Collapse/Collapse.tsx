@@ -1,5 +1,5 @@
 import { ReactNode, useCallback } from 'react'
-import styles from './Сollapse.module.css'
+import styles from './Collapse.module.css'
 import clsx from 'clsx'
 
 type CollapseParts = 'root' | 'titleWrapper' | 'triggerBtn' | 'contentWrapper' | 'content'

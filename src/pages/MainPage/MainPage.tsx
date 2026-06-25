@@ -5,6 +5,7 @@ import { MainFooter } from '@/layouts/footers/MainFooter'
 import { Hero } from './Hero'
 import { About } from './About'
 import { Activities } from './Activities'
+import { Information } from './Information'
 
 export const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ export const MainPage = () => {
         <Hero />
         <About />
         <Activities activities={BASE_ACTIVITIES_CARDS_CONTENT} />
+        <Information />
       </main>
       <MainFooter />
     </div>

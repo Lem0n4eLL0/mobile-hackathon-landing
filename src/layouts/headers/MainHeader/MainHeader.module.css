@@ -1,5 +1,6 @@
 .header {
   position: sticky;
+  z-index: 100000;
   top: 0;
   display: flex;
   align-items: center;
@@ -11,15 +12,9 @@
   background-color: var(--main-bg-color);
 }
 
-.header__logo-link {
-}
-
 .header__logo {
   width: 111px;
   height: auto;
-}
-
-.header__nav-menu {
 }
 
 .header__list {
@@ -28,9 +23,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.header__list-item {
 }
 
 .header__nav-link {

@@ -16,7 +16,6 @@
     var(--base-bottom-paddings-page);
   width: 100%;
   margin: 0 auto;
-  overflow: visible;
   max-width: var(--base-block-max-width);
 }
 
@@ -50,5 +49,9 @@
 
   .activities__list {
     margin: 0 0 24px;
+  }
+
+  .activities__btn {
+    width: 100%;
   }
 }

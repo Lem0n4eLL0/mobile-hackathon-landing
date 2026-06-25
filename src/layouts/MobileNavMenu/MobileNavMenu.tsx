@@ -47,7 +47,7 @@ export const MobileNavMenu = (props: IMobileNavMenu) => {
               <Image src={YasndexLogoRus} className={styles['menu__logo']} alt="Яндекс логотип" />
             </Link>
             <Close asChild>
-              <button className={styles['menu__close-btn']} aria-label="Закрыть меню">
+              <button type="button" className={styles['menu__close-btn']} aria-label="Закрыть меню">
                 <Image src={СrossIcon} alt="Закрыть меню"></Image>
               </button>
             </Close>
@@ -63,7 +63,10 @@ export const MobileNavMenu = (props: IMobileNavMenu) => {
               ))}
             </ul>
           </nav>
-          <button className={clsx(styles['menu__registration-btn'], commonStyles['pink_btn'])}>
+          <button
+            type="button"
+            className={clsx(styles['menu__registration-btn'], commonStyles['pink_btn'])}
+          >
             Регистрация на&nbsp;фестиваль
           </button>
         </Content>

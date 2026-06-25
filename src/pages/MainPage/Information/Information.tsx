@@ -1,0 +1,59 @@
+'use client'
+import { Collapse } from '@/components/Collapse'
+import Image from 'next/image'
+import styles from './Information.module.css'
+import arrow from '@/assets/arrow-down-white.svg'
+import { useCallback, useState } from 'react'
+import clsx from 'clsx'
+import { BASE_JURY_CARDS_CONTENT } from '@/common/common'
+import { Jury } from '../Jury'
+
+export const Information = () => {
+  const [isCollapsOpened, setIsCollapsOpened] = useState(false)
+
+  const collapsHandler = (isOpened: boolean) => {
+    setIsCollapsOpened(isOpened)
+  }
+
+  return (
+    <div className={styles['information__wrapper']}>
+      <div className={styles['information']}>
+        <h2 className={styles['information__title']}>
+          AI-хакатон для&nbsp;мобильных разработчиков
+        </h2>
+        <p className={styles['information__description']}>
+          Соберите команду, с&nbsp;которой вы&nbsp;напишите приложение по&nbsp;задаче
+          от&nbsp;организаторов
+        </p>
+        <Collapse
+          title={
+            <div className={styles['collapse__title']}>
+              <span className={styles['collapse__text']}>Подробнее</span>
+              <div className={styles['collapse__img-wrapper']}>
+                <Image
+                  className={clsx(
+                    styles['collapse__img'],
+                    isCollapsOpened && styles['collapse__img_opened']
+                  )}
+                  src={arrow}
+                  alt=""
+                />
+              </div>
+            </div>
+          }
+          isOpen={isCollapsOpened}
+          onToggle={collapsHandler}
+          classes={{
+            root: clsx(isCollapsOpened && styles['collapse_opened']),
+            titleWrapper: clsx(styles['collapse__title-wrapper']),
+          }}
+        >
+          <div className={styles['information__content']}>
+            <Jury persons={BASE_JURY_CARDS_CONTENT} />
+            <div className={styles['information__jury']}></div>
+          </div>
+        </Collapse>
+      </div>
+    </div>
+  )
+}
