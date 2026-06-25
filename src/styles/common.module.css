@@ -1,7 +1,6 @@
-.pink_btn {
-  color: var(--color-white);
+.pink_btn,
+.black_btn {
   padding: 20px 32px;
-  background-color: var(--accent-bg-color);
   border-radius: 24px;
   font-family: var(--main-text-font);
   font-weight: 500;
@@ -14,12 +13,25 @@
 }
 
 .pink_btn:hover,
-.pink_btn:focus-visible {
+.pink_btn:focus-visible,
+.black_btn:hover,
+.black_btn:focus-visible {
   opacity: 0.85;
 }
 
+.pink_btn {
+  color: var(--color-white);
+  background-color: var(--accent-bg-color);
+}
+
+.black_btn {
+  color: var(--color-white);
+  background-color: var(--main-bg-color);
+}
+
 @media (max-width: 767px) {
-  .pink_btn {
+  .pink_btn,
+  .black_btn {
     padding: 16px 32px;
     font-size: 16px;
     line-height: 1.25;

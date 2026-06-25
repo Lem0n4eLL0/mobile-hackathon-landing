@@ -1,4 +1,5 @@
 .jury {
+  margin-bottom: 48px;
 }
 
 .jury__title {
@@ -25,6 +26,10 @@
 }
 
 @media (max-width: 767px) {
+  .jury {
+    margin-bottom: 24px;
+  }
+
   .jury__title {
     margin: 0 0 16px;
   }
