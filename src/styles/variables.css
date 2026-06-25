@@ -46,6 +46,7 @@
   --additional-text-color-3: var(--color-white-30);
   --additional-text-color-effect: var(--color-white-85);
   --accent-text-color: var(--color-pink-700);
+  --accent-text-color-2: var(--color-grey-100);
 
   /* bg color */
   --main-bg-color: var(--color-black);

@@ -5,8 +5,9 @@ import styles from './Information.module.css'
 import arrow from '@/assets/arrow-down-white.svg'
 import { useCallback, useState } from 'react'
 import clsx from 'clsx'
-import { BASE_JURY_CARDS_CONTENT } from '@/common/common'
+import { BASE_JURY_CARDS_CONTENT, BASE_TIMING_CARDS_CONTENT } from '@/common/common'
 import { Jury } from '../Jury'
+import { Timing } from '../Timing'
 
 export const Information = () => {
   const [isCollapsOpened, setIsCollapsOpened] = useState(false)
@@ -49,8 +50,8 @@ export const Information = () => {
           }}
         >
           <div className={styles['information__content']}>
+            <Timing timings={BASE_TIMING_CARDS_CONTENT} />
             <Jury persons={BASE_JURY_CARDS_CONTENT} />
-            <div className={styles['information__jury']}></div>
           </div>
         </Collapse>
       </div>

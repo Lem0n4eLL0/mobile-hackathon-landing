@@ -5,12 +5,20 @@ import juryImg4 from '@/assets/jury/Anna_Zharkova.png'
 import juryImg5 from '@/assets/jury/Dmitry_Movchan.png'
 import juryImg6 from '@/assets/jury/Timur_Gasimov.png'
 import juryImg7 from '@/assets/jury/Gena_Evstratov.png'
+import { ReactNode } from 'react'
 
 /* Types */
 
 export type BaseActivity = {
   title: string
   description: string
+  number?: string
+}
+
+export type BaseTiming = {
+  title: ReactNode
+  description: string
+  timing: string
   number?: string
 }
 
@@ -142,5 +150,46 @@ export const BASE_JURY_CARDS_CONTENT: Array<Person> = [
     name: 'Геннадий Евстратов',
     post: 'Руководитель проектов',
     company: 'Яндекс',
+  },
+]
+
+/* Timing */
+
+export const BASE_TIMING_CARDS_CONTENT: Array<BaseTiming> = [
+  {
+    title: (
+      <>
+        Регистрация
+        <br />
+        команды
+      </>
+    ),
+    timing: 'До\u00A010\u00A0августа',
+    description:
+      'Участвовать могут от\u00A01\u00A0до\u00A05\u00A0человек. Команду регистрирует капитан, одна команда\u00A0\u2014 одна заявка.',
+  },
+  {
+    title: (
+      <>
+        Результаты
+        <br />
+        отбора
+      </>
+    ),
+    timing: 'В\u00A0течение 7\u201310 дней',
+    description:
+      'Вам на\u00A0почту придёт ответ по\u00A0участию и\u00A0с\u00A0вами свяжется куратор из\u00A0Яндекса\u00A0\u2014 можно будет задать любые вопросы.',
+  },
+  {
+    title: (
+      <>
+        Напоминание&nbsp;+
+        <br />
+        подтверждение
+      </>
+    ),
+    timing: '15\u201320 августа',
+    description:
+      'Мы\u00A0пришлём вам письмо на\u00A0почту, в\u00A0котором попросим подтвердить участие вашей команды в\u00A0AI-хакатоне.',
   },
 ]

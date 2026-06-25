@@ -25,3 +25,17 @@
     line-height: 1.25;
   }
 }
+
+.card__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-text-color);
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--accent-text-color-2);
+}
