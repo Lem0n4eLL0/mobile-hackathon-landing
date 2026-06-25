@@ -1,0 +1,43 @@
+.timing-card {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: auto auto;
+  height: 100%;
+  gap: 40px 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--additional-bg-color-2);
+}
+
+.timing-card__number {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+}
+
+.timing-card__title {
+  grid-area: 1 / 2 / 2 / 3;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  align-self: center;
+}
+
+.timing-card__content {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.timing-card__timing {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.timing-card__description {
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--main-text-color-2);
+}
+
+@media (max-width: 767px) {
+}
