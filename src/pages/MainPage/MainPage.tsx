@@ -1,11 +1,16 @@
 import { MainHeader } from '@/layouts/headers/MainHeader'
 import styles from './MainPage.module.css'
-import { BASE_ACTIVITIES_CARDS_CONTENT, BASE_HEADER_MENU_LINKS } from '@/common/common'
+import {
+  BASE_ACTIVITIES_CARDS_CONTENT,
+  BASE_HEADER_MENU_LINKS,
+  BASE_PROGRAMM_TABS_CARDS_CONTENT,
+} from '@/common/common'
 import { MainFooter } from '@/layouts/footers/MainFooter'
 import { Hero } from './Hero'
 import { About } from './About'
 import { Activities } from './Activities'
 import { Information } from './Information'
+import { Program } from './Program'
 
 export const MainPage = () => {
   return (
@@ -16,6 +21,7 @@ export const MainPage = () => {
         <About />
         <Activities activities={BASE_ACTIVITIES_CARDS_CONTENT} />
         <Information />
+        <Program programs={BASE_PROGRAMM_TABS_CARDS_CONTENT} />
       </main>
       <MainFooter />
     </div>

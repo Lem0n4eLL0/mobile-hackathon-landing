@@ -1,0 +1,24 @@
+.program__wrapper {
+  background-color: var(--additional-bg-color-2);
+  color: var(--main-text-color);
+}
+
+.program {
+  padding: var(--base-top-paddings-page) var(--base-side-paddings-page)
+    var(--base-bottom-paddings-page);
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--base-block-max-width);
+}
+
+.program__title {
+  font: var(--main-title-h2-font);
+  letter-spacing: var(--main-title-h2-letter-spacing);
+  margin: 0 0 48px;
+}
+
+@media (max-width: 767px) {
+  .information__title {
+    margin: 0 0 24px;
+  }
+}

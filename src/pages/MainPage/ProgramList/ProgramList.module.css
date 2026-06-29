@@ -1,0 +1,112 @@
+.program-list {
+}
+
+.program-list__list {
+  display: grid;
+  grid-template-columns: max-content 1fr auto;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.program-list__list-item {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: flex-start;
+  gap: 24px;
+  background-color: var(--additional-bg-color);
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.program-list__time-interval {
+  display: block;
+  font-family: var(--main-title-font);
+  font-size: 36px;
+  line-height: 1.06;
+  color: var(--accent-text-color);
+}
+
+.program-list__content {
+  flex-grow: 1;
+}
+
+.program-list__content_center {
+  align-self: center;
+}
+
+.program-list__presenters-list {
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+
+.program-list__presenters-list-item {
+  width: 100%;
+  max-width: 380px;
+}
+
+.program-list__presenters-list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.program-list__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.program-list__type {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--additional-text-color);
+  background-color: var(--accent-bg-color);
+  border-radius: 100px;
+  padding: 8px 16px;
+}
+
+.program-list__presenters-list-item .person__img {
+  width: 68px;
+  height: 68px;
+}
+
+@media (max-width: 767px) {
+  .program-list__list-item {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto auto;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .program-list__content {
+    grid-area: 2 / 1 / 2 / 3;
+    flex-grow: 1;
+  }
+
+  .program-list__time-interval {
+    font-size: 28px;
+    line-height: 1.08;
+  }
+
+  .program-list__title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .program-list__type {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 4px 9px;
+  }
+
+  .program-list__presenters-list-item .person__img {
+    width: 60px;
+    height: 60px;
+  }
+}
