@@ -63,12 +63,13 @@ export const MobileNavMenu = (props: IMobileNavMenu) => {
               ))}
             </ul>
           </nav>
-          <button
-            type="button"
+          <a
+            role="button"
+            href="##"
             className={clsx(styles['menu__registration-btn'], commonStyles['pink_btn'])}
           >
             Регистрация на&nbsp;фестиваль
-          </button>
+          </a>
         </Content>
       </Portal>
     </Root>

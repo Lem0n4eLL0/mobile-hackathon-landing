@@ -3,7 +3,7 @@ import styles from './MainPage.module.css'
 import {
   BASE_ACTIVITIES_CARDS_CONTENT,
   BASE_HEADER_MENU_LINKS,
-  BASE_PROGRAMM_TABS_CARDS_CONTENT,
+  BASE_PROGRAM_TABS_CARDS_CONTENT,
 } from '@/common/common'
 import { MainFooter } from '@/layouts/footers/MainFooter'
 import { Hero } from './Hero'
@@ -21,7 +21,7 @@ export const MainPage = () => {
         <About />
         <Activities activities={BASE_ACTIVITIES_CARDS_CONTENT} />
         <Information />
-        <Program programs={BASE_PROGRAMM_TABS_CARDS_CONTENT} />
+        <Program programs={BASE_PROGRAM_TABS_CARDS_CONTENT} />
       </main>
       <MainFooter />
     </div>

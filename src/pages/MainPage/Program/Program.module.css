@@ -17,8 +17,34 @@
   margin: 0 0 48px;
 }
 
+.program__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.program__btns-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
 @media (max-width: 767px) {
+  .program__btn {
+    width: 100%;
+  }
+
   .information__title {
     margin: 0 0 24px;
+  }
+
+  .program__content {
+    gap: 24px;
+  }
+
+  .program__btns-list {
+    flex-direction: column;
   }
 }

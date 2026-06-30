@@ -2,12 +2,14 @@
 
 import { Tabs } from '@/components/Tabs'
 import styles from './Program.module.css'
+import commonStyles from '@/styles/common.module.css'
 import { useState } from 'react'
-import { TProgram } from '@/common/common'
+import { TProgramBlock } from '@/common/common'
 import { ProgramList } from '../ProgramList'
+import clsx from 'clsx'
 
 type IProgram = {
-  programs: Array<TProgram>
+  programs: Array<TProgramBlock>
 }
 
 export const Program = (props: IProgram) => {
@@ -23,12 +25,33 @@ export const Program = (props: IProgram) => {
         <h2 className={styles['program__title']}>Программа</h2>
         {isProgram && (
           <Tabs
-            currentName={currentTab ?? programs[0].lable}
+            currentName={currentTab ?? programs[0].program.lable}
             setCurrentTab={(name) => void setCurrentTab(name)}
             tabs={programs.map((el) => ({
-              name: el.lable,
-              lable: el.lable,
-              children: <ProgramList events={el.events} />,
+              name: el.program.lable,
+              lable: el.program.lable,
+              children: (
+                <div className={styles['program__content']}>
+                  <ProgramList events={el.program.events} />
+                  <ul className={styles['program__btns-list']}>
+                    {el.buttons.map((el, ind) => (
+                      <li className={styles['program__btns-list-item']} key={ind}>
+                        <a
+                          href={el.link}
+                          role="button"
+                          className={clsx(
+                            styles['program__btn'],
+                            el.type === 'black' && commonStyles['black_btn'],
+                            el.type === 'pink' && commonStyles['pink_btn']
+                          )}
+                        >
+                          {el.lable}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ),
             }))}
           />
         )}

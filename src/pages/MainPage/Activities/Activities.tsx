@@ -28,9 +28,13 @@ export const Activities = (props: IActivities) => {
             ))}
           </ol>
         )}
-        <button type="button" className={clsx(commonStyles['pink_btn'], styles['activities__btn'])}>
+        <a
+          role="button"
+          href="##"
+          className={clsx(commonStyles['pink_btn'], styles['activities__btn'])}
+        >
           Регистрация на&nbsp;фестивать
-        </button>
+        </a>
       </div>
     </div>
   )

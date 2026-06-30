@@ -53,12 +53,13 @@ export const Information = () => {
           <div className={styles['information__content']}>
             <Timing timings={BASE_TIMING_CARDS_CONTENT} />
             <Jury persons={BASE_JURY_CARDS_CONTENT} />
-            <button
-              type="button"
+            <a
+              role="button"
+              href="##"
               className={clsx(styles['information__btn'], commonStyles['black_btn'])}
             >
               Записаться на&nbsp;хакатон
-            </button>
+            </a>
           </div>
         </Collapse>
       </div>

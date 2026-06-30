@@ -1,5 +1,6 @@
 .pink_btn,
 .black_btn {
+  display: inline-block;
   padding: 20px 32px;
   border-radius: 24px;
   font-family: var(--main-text-font);
@@ -10,6 +11,8 @@
   transition: opacity var(--base-transition-property);
   cursor: pointer;
   border: none;
+  text-decoration: none;
+  text-align: center;
 }
 
 .pink_btn:hover,

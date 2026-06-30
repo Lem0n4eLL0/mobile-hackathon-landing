@@ -19,9 +19,9 @@ export const Hero = () => {
             Фестиваль практики и&nbsp;технобатлов для&nbsp;мобильных разработчиков
           </p>
         </div>
-        <button type="button" className={clsx(commonStyles['pink_btn'], styles['hero__btn'])}>
+        <a role="button" href="##" className={clsx(commonStyles['pink_btn'], styles['hero__btn'])}>
           Регистрация на&nbsp;фестивать
-        </button>
+        </a>
       </div>
     </div>
   )

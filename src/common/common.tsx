@@ -205,188 +205,237 @@ export type TProgram = {
   events: Array<TProgramEvent>
 }
 
-export const BASE_PROGRAMM_TABS_CARDS_CONTENT: Array<TProgram> = [
+export type TButtonTypes = 'pink' | 'black'
+export type TButton = {
+  lable: ReactNode
+  link: string
+  type: TButtonTypes
+}
+
+export type TProgramBlock = {
+  program: TProgram
+  buttons: Array<TButton>
+}
+
+export const BASE_PROGRAM_TABS_CARDS_CONTENT: Array<TProgramBlock> = [
   {
-    lable: `Зал ${TYPO.LAQUO}Экстрополис${TYPO.RAQUO}`,
-    events: [
+    program: {
+      lable: `Зал ${TYPO.LAQUO}Экстрополис${TYPO.RAQUO}`,
+      events: [
+        {
+          timeInterval: `11:00${TYPO.NDASH}11:30`,
+          title: `Регистрация и${TYPO.NBSP}сбор команд на${TYPO.NBSP}хакатон`,
+        },
+        {
+          timeInterval: `11:30${TYPO.NDASH}12:00`,
+          title: `Открытие хакатона и${TYPO.NBSP}распределение задач`,
+        },
+        {
+          timeInterval: `12:00${TYPO.NDASH}17:00`,
+          title: `Время для${TYPO.NBSP}разработки${TYPO.NBSP}/ активной работы${TYPO.NBSP}/ хакатона`,
+          type: `Хакатон`,
+        },
+        {
+          timeInterval: `17:00${TYPO.NDASH}17:30`,
+          title: `Стоп разработки и${TYPO.NBSP}подготовка к${TYPO.NBSP}финальной презентации`,
+          type: `Хакатон`,
+        },
+        {
+          timeInterval: `17:30${TYPO.NDASH}18:30`,
+          title: `Презентация результатов проектов`,
+          type: `Хакатон`,
+        },
+        {
+          timeInterval: `18:30${TYPO.NDASH}19:00`,
+          title: `Перерыв`,
+        },
+        {
+          timeInterval: `19:00${TYPO.NDASH}19:30`,
+          title: `Результаты и${TYPO.NBSP}награждение`,
+          type: `Хакатон`,
+        },
+        {
+          timeInterval: `19:30${TYPO.NDASH}20:00`,
+          title: `Перерыв`,
+        },
+        {
+          timeInterval: `20:00${TYPO.NDASH}21:30`,
+          title: `Квиз про${TYPO.NBSP}мобильную разработку`,
+          type: `Хакатон`,
+        },
+        {
+          timeInterval: `21:30`,
+          title: `DJ-сет`,
+        },
+      ],
+    },
+    buttons: [
       {
-        timeInterval: `11:00${TYPO.NDASH}11:30`,
-        title: `Регистрация и${TYPO.NBSP}сбор команд на${TYPO.NBSP}хакатон`,
+        lable: `Регистрация на${TYPO.NBSP}хакатон`,
+        link: `##`,
+        type: `black`,
       },
       {
-        timeInterval: `11:30${TYPO.NDASH}12:00`,
-        title: `Открытие хакатона и${TYPO.NBSP}распределение задач`,
-      },
-      {
-        timeInterval: `12:00${TYPO.NDASH}17:00`,
-        title: `Время для${TYPO.NBSP}разработки${TYPO.NBSP}/ активной работы${TYPO.NBSP}/ хакатона`,
-        type: `Хакатон`,
-      },
-      {
-        timeInterval: `17:00${TYPO.NDASH}17:30`,
-        title: `Стоп разработки и${TYPO.NBSP}подготовка к${TYPO.NBSP}финальной презентации`,
-        type: `Хакатон`,
-      },
-      {
-        timeInterval: `17:30${TYPO.NDASH}18:30`,
-        title: `Презентация результатов проектов`,
-        type: `Хакатон`,
-      },
-      {
-        timeInterval: `18:30${TYPO.NDASH}19:00`,
-        title: `Перерыв`,
-      },
-      {
-        timeInterval: `19:00${TYPO.NDASH}19:30`,
-        title: `Результаты и${TYPO.NBSP}награждение`,
-        type: `Хакатон`,
-      },
-      {
-        timeInterval: `19:30${TYPO.NDASH}20:00`,
-        title: `Перерыв`,
-      },
-      {
-        timeInterval: `20:00${TYPO.NDASH}21:30`,
-        title: `Квиз про${TYPO.NBSP}мобильную разработку`,
-        type: `Хакатон`,
-      },
-      {
-        timeInterval: `21:30`,
-        title: `DJ-сет`,
+        lable: `Кодить на${TYPO.NBSP}AI-хакатоне`,
+        link: `##`,
+        type: `pink`,
       },
     ],
   },
   {
-    lable: `Зал ${TYPO.LAQUO}Мулен Руж${TYPO.RAQUO}`,
-    events: [
+    program: {
+      lable: `Зал ${TYPO.LAQUO}Мулен Руж${TYPO.RAQUO}`,
+      events: [
+        {
+          timeInterval: `11:00${TYPO.NDASH}12:00`,
+          title: `Сбор гостей, регистрация и${TYPO.NBSP}кофе-брейк`,
+        },
+        {
+          timeInterval: `12:00${TYPO.NDASH}12:15`,
+          title: `Открытие`,
+        },
+        {
+          timeInterval: `12:30${TYPO.NDASH}14:00`,
+          title: `Воркшоп ${TYPO.LAQUO}Пишем MCP для${TYPO.NBSP}мобильных разработчиков${TYPO.RAQUO}`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Николай Пучко`,
+              imgPath: moulinRougeSpeakerNikolayPuchko.src,
+              post: `Руководитель федерации мобильного CX${TYPO.NBSP}Путешествий`,
+            },
+          ],
+        },
+        {
+          timeInterval: `14:00${TYPO.NDASH}14:30`,
+          title: `Обед`,
+        },
+        {
+          timeInterval: `14:30${TYPO.NDASH}16:00`,
+          title: `Воркшоп ${TYPO.LAQUO}Ускорение приложений${TYPO.RAQUO}`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Никита Шаповалов`,
+              imgPath: moulinRougeSpeakerNikitaShapovalov.src,
+              post: `Руководитель группы технологий скорости в${TYPO.NBSP}Яндекс Маркете`,
+            },
+          ],
+        },
+        {
+          timeInterval: `16:00${TYPO.NDASH}16:10`,
+          title: `Перерыв`,
+        },
+        {
+          timeInterval: `16:10${TYPO.NDASH}17:30`,
+          title: `Воркшоп ${TYPO.LAQUO}Почувствуй себя разработчиком карт${TYPO.RAQUO}`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Олег Белянков`,
+              imgPath: moulinRougeSpeakerOlegBelyankov.src,
+              post: `Разработчик в${TYPO.NBSP}Яндекс Картах`,
+            },
+            {
+              name: `Марк Дубков`,
+              imgPath: moulinRougeSpeakerMarkDubko.src,
+              post: `Разработчик в${TYPO.NBSP}Яндекс Картах`,
+            },
+          ],
+        },
+        {
+          timeInterval: `17:30${TYPO.NDASH}17:40`,
+          title: `Перерыв`,
+        },
+        {
+          timeInterval: `17:40${TYPO.NDASH}19:00`,
+          title: `Мобильная разработка 2025+: тренды и${TYPO.NBSP}вызовы`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Артур Василов`,
+              imgPath: moulinRougeSpeakerArturVasilov.src,
+              post: `Руководитель мобильной разработки в${TYPO.NBSP}Яндекс Браузере`,
+            },
+          ],
+        },
+      ],
+    },
+    buttons: [
       {
-        timeInterval: `11:00${TYPO.NDASH}12:00`,
-        title: `Сбор гостей, регистрация и${TYPO.NBSP}кофе-брейк`,
+        lable: `Регистрация на${TYPO.NBSP}хакатон`,
+        link: `##`,
+        type: `black`,
       },
       {
-        timeInterval: `12:00${TYPO.NDASH}12:15`,
-        title: `Открытие`,
-      },
-      {
-        timeInterval: `12:30${TYPO.NDASH}14:00`,
-        title: `Воркшоп ${TYPO.LAQUO}Пишем MCP для${TYPO.NBSP}мобильных разработчиков${TYPO.RAQUO}`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Николай Пучко`,
-            imgPath: moulinRougeSpeakerNikolayPuchko.src,
-            post: `Руководитель федерации мобильного CX${TYPO.NBSP}Путешествий`,
-          },
-        ],
-      },
-      {
-        timeInterval: `14:00${TYPO.NDASH}14:30`,
-        title: `Обед`,
-      },
-      {
-        timeInterval: `14:30${TYPO.NDASH}16:00`,
-        title: `Воркшоп ${TYPO.LAQUO}Ускорение приложений${TYPO.RAQUO}`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Никита Шаповалов`,
-            imgPath: moulinRougeSpeakerNikitaShapovalov.src,
-            post: `Руководитель группы технологий скорости в${TYPO.NBSP}Яндекс Маркете`,
-          },
-        ],
-      },
-      {
-        timeInterval: `16:00${TYPO.NDASH}16:10`,
-        title: `Перерыв`,
-      },
-      {
-        timeInterval: `16:10${TYPO.NDASH}17:30`,
-        title: `Воркшоп ${TYPO.LAQUO}Почувствуй себя разработчиком карт${TYPO.RAQUO}`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Олег Белянков`,
-            imgPath: moulinRougeSpeakerOlegBelyankov.src,
-            post: `Разработчик в${TYPO.NBSP}Яндекс Картах`,
-          },
-          {
-            name: `Марк Дубков`,
-            imgPath: moulinRougeSpeakerMarkDubko.src,
-            post: `Разработчик в${TYPO.NBSP}Яндекс Картах`,
-          },
-        ],
-      },
-      {
-        timeInterval: `17:30${TYPO.NDASH}17:40`,
-        title: `Перерыв`,
-      },
-      {
-        timeInterval: `17:40${TYPO.NDASH}19:00`,
-        title: `Мобильная разработка 2025+: тренды и${TYPO.NBSP}вызовы`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Артур Василов`,
-            imgPath: moulinRougeSpeakerArturVasilov.src,
-            post: `Руководитель мобильной разработки в${TYPO.NBSP}Яндекс Браузере`,
-          },
-        ],
+        lable: `Кодить на${TYPO.NBSP}AI-хакатоне`,
+        link: `##`,
+        type: `pink`,
       },
     ],
   },
   {
-    lable: `PeerLab от${TYPO.NBSP}Городских сервисов`,
-    events: [
+    program: {
+      lable: `PeerLab от${TYPO.NBSP}Городских сервисов`,
+      events: [
+        {
+          timeInterval: `12:30${TYPO.NDASH}14:00`,
+          title: `BDUI`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Егор Губанов`,
+              imgPath: peerLabSpeakerEgorGubanovfrom.src,
+              post: `iOS-разработчик в${TYPO.NBSP}Яндекс Маркете`,
+            },
+            {
+              name: `Александр Верестников`,
+              imgPath: peerLabSpeakerAlexanderVerestnikov.src,
+              post: `Руководитель подгруппы в${TYPO.NBSP}команде Яндекс${TYPO.NBSP}Go`,
+            },
+          ],
+        },
+        {
+          timeInterval: `14:30${TYPO.NDASH}16:00`,
+          title: `ADR, System Design и${TYPO.NBSP}глобальные рефакторинги`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Константин Ларгин`,
+              imgPath: peerLabSpeakerKonstantinLargin.src,
+              post: `Руководитель мобильной разработки Яндекс Еды`,
+            },
+            {
+              name: `Лев Бондаренко`,
+              imgPath: peerLabSpeakerLevBondarenko.src,
+              post: `iOS-разработчик в${TYPO.NBSP}Яндекс Еде`,
+            },
+          ],
+        },
+        {
+          timeInterval: `16:00${TYPO.NDASH}17:30`,
+          title: `Метрики мобильных приложений`,
+          type: `Ивент`,
+          presenters: [
+            {
+              name: `Никита Васильченко`,
+              imgPath: peerLabSpeakerNikitaVasilchenko.src,
+              post: `Руководитель группы скорости в${TYPO.NBSP}Go`,
+            },
+            {
+              name: `Михаил Черников`,
+              imgPath: peerLabSpeakerMikhailChernikov.src,
+              post: `Руководитель мобильной разработки покупки в${TYPO.NBSP}Яндекс Маркете`,
+            },
+          ],
+        },
+      ],
+    },
+    buttons: [
       {
-        timeInterval: `12:30${TYPO.NDASH}14:00`,
-        title: `BDUI`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Егор Губанов`,
-            imgPath: peerLabSpeakerEgorGubanovfrom.src,
-            post: `iOS-разработчик в${TYPO.NBSP}Яндекс Маркете`,
-          },
-          {
-            name: `Александр Верестников`,
-            imgPath: peerLabSpeakerAlexanderVerestnikov.src,
-            post: `Руководитель подгруппы в${TYPO.NBSP}команде Яндекс${TYPO.NBSP}Go`,
-          },
-        ],
-      },
-      {
-        timeInterval: `14:30${TYPO.NDASH}16:00`,
-        title: `ADR, System Design и${TYPO.NBSP}глобальные рефакторинги`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Константин Ларгин`,
-            imgPath: peerLabSpeakerKonstantinLargin.src,
-            post: `Руководитель мобильной разработки Яндекс Еды`,
-          },
-          {
-            name: `Лев Бондаренко`,
-            imgPath: peerLabSpeakerLevBondarenko.src,
-            post: `iOS-разработчик в${TYPO.NBSP}Яндекс Еде`,
-          },
-        ],
-      },
-      {
-        timeInterval: `16:00${TYPO.NDASH}17:30`,
-        title: `Метрики мобильных приложений`,
-        type: `Ивент`,
-        presenters: [
-          {
-            name: `Никита Васильченко`,
-            imgPath: peerLabSpeakerNikitaVasilchenko.src,
-            post: `Руководитель группы скорости в${TYPO.NBSP}Go`,
-          },
-          {
-            name: `Михаил Черников`,
-            imgPath: peerLabSpeakerMikhailChernikov.src,
-            post: `Руководитель мобильной разработки покупки в${TYPO.NBSP}Яндекс Маркете`,
-          },
-        ],
+        lable: `Регистрация на${TYPO.NBSP}фестиваль`,
+        link: `##`,
+        type: `pink`,
       },
     ],
   },
