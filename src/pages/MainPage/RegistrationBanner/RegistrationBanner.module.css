@@ -1,0 +1,79 @@
+.registration-banner__wrapper {
+  background-color: var(--main-bg-color);
+  color: var(--additional-text-color);
+}
+
+.registration-banner {
+  padding: 0 var(--base-side-paddings-page);
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--base-block-max-width);
+  background-image: url('@/assets/banner-block-bg-img.png');
+  background-repeat: no-repeat;
+  background-position: top 65% right -45%;
+  background-size: 1120px auto;
+}
+
+.registration-banner__content {
+  padding: 64px 0;
+}
+
+.registration-banner__title {
+  aspect-ratio: 467 / 150;
+  width: 467px;
+  background-image: url('@/assets/banner-block-text-bg-desk.svg');
+  background-repeat: no-repeat;
+  background-size: 467px auto;
+  margin-bottom: 12px;
+  padding: 8px 0 0 13px;
+  font-family: var(--main-title-font);
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 1279px) {
+  .registration-banner {
+    background-position: top 65% right -45%;
+    background-size: 840px auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .registration-banner {
+    background-position: top 65% right -45%;
+    background-size: 672px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .registration-banner {
+    background-image: url('@/assets/banner-block-bg-img-mob.png');
+    background-position: top right;
+    background-size: 420px auto;
+  }
+
+  .registration-banner__content {
+    padding: 191px 0 12px;
+  }
+
+  .registration-banner__btn {
+    width: 100%;
+  }
+
+  .registration-banner__title {
+    width: 328px;
+    padding: 10px 0 0 12px;
+    background-size: 328px auto;
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 519px) {
+  .registration-banner {
+    background-image: url('@/assets/banner-block-bg-img-mob.png');
+    background-position: top right;
+    background-size: 360px auto;
+  }
+}

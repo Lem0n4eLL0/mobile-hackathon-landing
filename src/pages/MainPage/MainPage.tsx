@@ -11,6 +11,7 @@ import { About } from './About'
 import { Activities } from './Activities'
 import { Information } from './Information'
 import { Program } from './Program'
+import { RegistrationBanner } from './RegistrationBanner'
 
 export const MainPage = () => {
   return (
@@ -22,6 +23,7 @@ export const MainPage = () => {
         <Activities activities={BASE_ACTIVITIES_CARDS_CONTENT} />
         <Information />
         <Program programs={BASE_PROGRAM_TABS_CARDS_CONTENT} />
+        <RegistrationBanner />
       </main>
       <MainFooter />
     </div>
