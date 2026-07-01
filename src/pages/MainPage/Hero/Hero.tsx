@@ -5,7 +5,7 @@ import commonStyles from '@/styles/common.module.css'
 export const Hero = () => {
   return (
     <div className={styles['hero__wrapper']}>
-      <div className={styles['hero']}>
+      <section className={styles['hero']}>
         <ul className={styles['hero__list']}>
           <li className={styles['hero__list-item']}>23&nbsp;августа</li>
         </ul>
@@ -22,7 +22,7 @@ export const Hero = () => {
         <a role="button" href="##" className={clsx(commonStyles['pink_btn'], styles['hero__btn'])}>
           Регистрация на&nbsp;фестивать
         </a>
-      </div>
+      </section>
     </div>
   )
 }

@@ -21,7 +21,7 @@ export const Program = (props: IProgram) => {
 
   return (
     <div className={styles['program__wrapper']}>
-      <div className={styles['program']}>
+      <section className={styles['program']}>
         <h2 className={styles['program__title']}>Программа</h2>
         {isProgram && (
           <Tabs
@@ -55,7 +55,7 @@ export const Program = (props: IProgram) => {
             }))}
           />
         )}
-      </div>
+      </section>
     </div>
   )
 }

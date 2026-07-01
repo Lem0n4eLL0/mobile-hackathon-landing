@@ -3,7 +3,7 @@ import styles from './About.module.css'
 export const About = () => {
   return (
     <div className={styles['about__wrapper']}>
-      <div className={styles['about']}>
+      <section className={styles['about']}>
         <p className={styles['about__description']}>
           Yandex Mobile Runtime&nbsp;&mdash; летний фестиваль практики и&nbsp;карьерного роста
           для&nbsp;мобильных разработчиков. Встречаемся mobile-сообществом, чтобы обменяться опытом
@@ -17,7 +17,7 @@ export const About = () => {
           <li className={styles['about__list-item']}>Квиз</li>
           <li className={styles['about__list-item']}>Летний двор</li>
         </ul>
-      </div>
+      </section>
     </div>
   )
 }

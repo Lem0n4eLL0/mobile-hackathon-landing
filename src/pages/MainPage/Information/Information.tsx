@@ -19,7 +19,7 @@ export const Information = () => {
 
   return (
     <div className={styles['information__wrapper']}>
-      <div className={styles['information']}>
+      <section className={styles['information']}>
         <h2 className={styles['information__title']}>
           AI-хакатон для&nbsp;мобильных разработчиков
         </h2>
@@ -62,7 +62,7 @@ export const Information = () => {
             </a>
           </div>
         </Collapse>
-      </div>
+      </section>
     </div>
   )
 }

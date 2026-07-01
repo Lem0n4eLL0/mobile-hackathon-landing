@@ -12,7 +12,7 @@ export const Activities = (props: IActivities) => {
   const { activities } = props
   return (
     <div className={styles['activities__wrapper']}>
-      <div className={styles['activities']}>
+      <section className={styles['activities']}>
         <h2 className={styles['activities__title']}>Что вас ждёт?</h2>
         <p className={styles['activities__subtitle']}>
           Yandex Mobile Runtime&nbsp;&mdash; это фестиваль в&nbsp;офисе Яндекса, где вас будут ждать
@@ -35,7 +35,7 @@ export const Activities = (props: IActivities) => {
         >
           Регистрация на&nbsp;фестивать
         </a>
-      </div>
+      </section>
     </div>
   )
 }
