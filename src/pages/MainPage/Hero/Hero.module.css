@@ -2,10 +2,10 @@
   font-family: var(--main-title-font);
   background-color: var(--main-bg-color);
   color: var(--additional-text-color);
-  background-image: url('@/assets/hero-block-bg-img.png');
+  background-image: url('@/assets/hero-block-bg-img-desk.png');
   background-repeat: no-repeat;
   background-size: 1734px auto;
-  background-position: 50%;
+  background-position: calc(50% + 150px) 40%;
 }
 
 .hero {
@@ -67,7 +67,19 @@
   max-width: min-content;
 }
 
+@media (max-width: 1439px) {
+  .hero__wrapper {
+    background-position: calc(50% + 90px) 44%;
+  }
+}
+
 @media (max-width: 767px) {
+  .hero__wrapper {
+    background-image: url('@/assets/hero-block-bg-img-mob.png');
+    background-size: 886px auto;
+    background-position: calc(50% + 4px) 63%;
+  }
+
   .hero {
     gap: 8px;
     padding: 183px var(--base-side-paddings-page) 64px;
