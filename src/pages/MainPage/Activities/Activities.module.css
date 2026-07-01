@@ -1,17 +1,39 @@
 .activities__wrapper {
+  position: relative;
   color: var(--additional-text-color);
-  background-color: var(--main-bg-color);
-  background-image:
-    url('@/assets/road-map-bg-decorative-element-1.png'),
-    url('@/assets/road-map-bg-decorative-element-2.png');
+  background:
+    url('@/assets/road-map-bg-decorative-element-1.png') left calc(50% - 695px) top 2% / 883px,
+    url('@/assets/road-map-bg-decorative-element-2.png') right
+      calc(50% - clamp(615px, -285px + 62.5vw, 915px)) top 100% / 1088px;
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position:
-    50%,
-    -50%;
+  background-color: var(--main-bg-color);
+}
+
+@media (max-width: 1439px) {
+  .activities__wrapper {
+    background-position:
+      left -365px top 10%,
+      right -435px top 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .activities__wrapper {
+    background-position:
+      right -120px top 40%,
+      right -300px bottom calc(-11% - 5px);
+    background-size:
+      410px auto,
+      729px auto;
+    background-image:
+      url('@/assets/road-map-bg-decorative-element-1-mob.png'),
+      url('@/assets/road-map-bg-decorative-element-2.png');
+  }
 }
 
 .activities {
+  position: relative;
+  z-index: 1;
   padding: var(--base-top-paddings-page) var(--base-side-paddings-page)
     var(--base-bottom-paddings-page);
   width: 100%;
@@ -49,6 +71,7 @@
 
   .activities__list {
     margin: 0 0 24px;
+    gap: 8px;
   }
 
   .activities__btn {

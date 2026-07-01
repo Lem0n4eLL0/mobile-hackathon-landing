@@ -48,6 +48,7 @@
 @media (max-width: 767px) {
   .activities-card {
     display: flex;
+    backdrop-filter: none;
     flex-direction: column;
     padding: 16px;
     gap: 0;
