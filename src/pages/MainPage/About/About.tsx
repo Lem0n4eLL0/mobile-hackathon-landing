@@ -2,7 +2,7 @@ import styles from './About.module.css'
 
 export const About = () => {
   return (
-    <div className={styles['about__wrapper']}>
+    <div id="about" className={styles['about__wrapper']}>
       <section className={styles['about']}>
         <p className={styles['about__description']}>
           Yandex Mobile Runtime&nbsp;&mdash; летний фестиваль практики и&nbsp;карьерного роста

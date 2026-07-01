@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Close,
   Content,
@@ -16,7 +18,7 @@ import Image from 'next/image'
 import YasndexLogoRus from '@/assets/yandex-logo-rus.svg'
 import СrossIcon from '@/assets/cross-icon.svg'
 import clsx from 'clsx'
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 
 type IMobileNavMenu = {
   dialogProps: DialogProps
@@ -25,6 +27,11 @@ type IMobileNavMenu = {
 
 export const MobileNavMenu = (props: IMobileNavMenu) => {
   const { dialogProps, menuLinks } = props
+
+  const navLinkHandler = useCallback(
+    () => dialogProps.onOpenChange && dialogProps.onOpenChange(false),
+    [dialogProps.onOpenChange]
+  )
 
   useEffect(() => {
     const resizeEvent = () => {
@@ -56,7 +63,11 @@ export const MobileNavMenu = (props: IMobileNavMenu) => {
             <ul className={styles['menu__list']}>
               {menuLinks.map((el, ind) => (
                 <li className={styles['menu__list-item']} key={ind}>
-                  <Link href={el.href} className={styles['menu__nav-link']}>
+                  <Link
+                    href={el.href}
+                    className={styles['menu__nav-link']}
+                    onClick={() => void navLinkHandler()}
+                  >
                     {el.lable}
                   </Link>
                 </li>

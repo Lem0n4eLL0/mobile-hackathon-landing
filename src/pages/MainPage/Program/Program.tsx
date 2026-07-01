@@ -20,7 +20,7 @@ export const Program = (props: IProgram) => {
   const isProgram = programs.length !== 0
 
   return (
-    <div className={styles['program__wrapper']}>
+    <div id="program" className={styles['program__wrapper']}>
       <section className={styles['program']}>
         <h2 className={styles['program__title']}>Программа</h2>
         {isProgram && (

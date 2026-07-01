@@ -18,7 +18,7 @@ export const Information = () => {
   }
 
   return (
-    <div className={styles['information__wrapper']}>
+    <div id="information" className={styles['information__wrapper']}>
       <section className={styles['information']}>
         <h2 className={styles['information__title']}>
           AI-хакатон для&nbsp;мобильных разработчиков

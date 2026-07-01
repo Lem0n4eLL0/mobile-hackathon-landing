@@ -7,7 +7,7 @@ import BurgerMenuIcon from '@/assets/burger-menu-icon.svg'
 import Link from 'next/link'
 import { HeaderMenuLinks } from '@/common/common'
 import { MobileNavMenu } from '@/layouts/MobileNavMenu'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 type IMainHeader = {
   menuLinks: HeaderMenuLinks

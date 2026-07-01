@@ -63,11 +63,19 @@
   --base-top-paddings-page: 48px;
   --base-bottom-paddings-page: 96px;
   --base-block-max-width: 1440px;
+  --scroll-margin-top: 88.39px;
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --scroll-margin-top: 84.39px;
+  }
 }
 
 @media (max-width: 1279px) {
   :root {
     --base-side-paddings-page: 108px;
+    --scroll-margin-top: 84.39px;
   }
 }
 
@@ -91,5 +99,6 @@
     /* OTHER */
     --base-side-paddings-page: 28px;
     --base-bottom-paddings-page: 48px;
+    --scroll-margin-top: 68.31px;
   }
 }

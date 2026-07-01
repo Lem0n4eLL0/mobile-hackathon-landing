@@ -11,7 +11,7 @@ type IActivities = {
 export const Activities = (props: IActivities) => {
   const { activities } = props
   return (
-    <div className={styles['activities__wrapper']}>
+    <div id="activities" className={styles['activities__wrapper']}>
       <section className={styles['activities']}>
         <h2 className={styles['activities__title']}>Что вас ждёт?</h2>
         <p className={styles['activities__subtitle']}>

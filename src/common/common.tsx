@@ -75,23 +75,23 @@ export type HeaderMenuLinks = Array<HeaderMenuLink>
 export const BASE_HEADER_MENU_LINKS: HeaderMenuLinks = [
   {
     lable: `О${TYPO.NBSP}мероприятии`,
-    href: `##`,
+    href: `#about`,
   },
   {
     lable: `AI-хакатон`,
-    href: `##`,
+    href: `#information`,
   },
   {
     lable: `Что ещё вас ждёт`,
-    href: `##`,
+    href: `#activities`,
   },
   {
     lable: `Жюри`,
-    href: `##`,
+    href: `#jury`,
   },
   {
     lable: `Программа`,
-    href: `##`,
+    href: `#program`,
   },
 ]
 

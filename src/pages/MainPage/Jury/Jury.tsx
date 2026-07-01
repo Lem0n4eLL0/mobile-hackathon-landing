@@ -9,7 +9,7 @@ type IJury = {
 export const Jury = (props: IJury) => {
   const { persons } = props
   return (
-    <div className={styles['jury']}>
+    <div id="jury" className={styles['jury']}>
       <h3 className={styles['jury__title']}>Жюри хакатона</h3>
       <ul className={styles['jury__list']}>
         {persons.map((el, ind) => (
